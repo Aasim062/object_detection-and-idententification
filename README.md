@@ -1,4 +1,33 @@
 # object_detection-and-idententification
+Objective: Detect and save 3D objects using a custom-trained YOLOv3 model.
+Focus: Objects with a white background in webcam feed.
+Methodology
+Custom YOLOv3 Model
+YOLOv3: Fast and accurate object detection model.
+Custom Training: Trained on a dataset of 3D objects.
+Implementation Steps
+Loading Class Names:
+
+Load class names from custom.names.
+Model Setup:
+
+Initialize model with yolov3_custom.cfg and yolov3-custom_last.weights.
+Set input size to 320x320 with normalization.
+Image Capture and Preprocessing:
+
+Capture frames from a webcam.
+Check if frame has a white background.
+Object Detection:
+
+Detect objects with confidence scores above 0.6.
+Return bounding boxes, class IDs, and confidence scores.
+Annotation and Saving Detected Objects:
+
+Annotate frames with bounding boxes and class names.
+Save objects with highest confidence.
+Logging:
+
+Log detected objects and confidence scores to detected_objects.txt.
 
 In the realm of computer vision, object detection is a critical task that involves identifying instances of objects from predefined classes within an image. This paper discusses the implementation of a custom object detection system using the YOLOv3 (You Only Look Once) model. The system is tailored to detect 3D objects by employing a custom-trained YOLOv3 model and library. The primary objective is to identify and save detected objects in images captured from a webcam feed, specifically focusing on those with a white background.
 
