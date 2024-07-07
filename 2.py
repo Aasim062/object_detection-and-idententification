@@ -88,9 +88,9 @@ def setup_detection_model(config_path, weights_path):
         exit(1)
 
 if __name__ == "__main__":
-    classFile = "Object_Detection_Files/coco.names"
-    configPath = "Object_Detection_Files/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt"
-    weightsPath = "Object_Detection_Files/frozen_inference_graph.pb"
+    classFile = "Object_Detection_Files/custon.names"# path of class file
+    configPath = "Object_Detection_Files/yolov3_custom.cfg"#path of cfg file
+    weightsPath = "Object_Detection_Files/yolov3-custom_last.weights"#path of weights file , download it first
 
     classNames = load_class_names(classFile)
     net = setup_detection_model(configPath, weightsPath)
